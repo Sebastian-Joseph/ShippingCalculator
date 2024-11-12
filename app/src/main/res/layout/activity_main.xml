@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shippingbck"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/weightOfPackage"
+        android:layout_width="390dp"
+        android:layout_height="52dp"
+        android:text="@string/weightLBL"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="249dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/zero"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightOfPackage" />
+
+    <TextView
+        android:id="@+id/inOunces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ounceLBL"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userInput" />
+
+    <TextView
+        android:id="@+id/baseCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="204dp"
+        android:text="@string/baseLBL"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@+id/baseNum"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inOunces" />
+
+    <TextView
+        android:id="@+id/addedCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/addCostLBL"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/baseCost"
+        app:layout_constraintTop_toBottomOf="@+id/baseCost" />
+
+    <TextView
+        android:id="@+id/shippingCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/totalLBL"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/addedCost"
+        app:layout_constraintTop_toBottomOf="@+id/addedCost" />
+
+    <TextView
+        android:id="@+id/baseNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/zeroDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inOunces" />
+
+    <TextView
+        android:id="@+id/addedNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/zeroDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/baseNum"
+        app:layout_constraintTop_toBottomOf="@+id/baseNum" />
+
+    <TextView
+        android:id="@+id/shippingNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/zeroDec"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addedNum"
+        app:layout_constraintTop_toBottomOf="@+id/addedNum" />
+</androidx.constraintlayout.widget.ConstraintLayout>
